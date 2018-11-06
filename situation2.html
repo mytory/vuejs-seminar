@@ -14,21 +14,21 @@
         <h1>문제 상황 2</h1>
         <div>
             구독기간:
-            <label><input type="radio" name="period" value="1" checked>1년</label>
-            <label><input type="radio" name="period" value="2">2년</label>
-            <label><input type="radio" name="period" value="3">3년</label>
+            <label><input v-model="period" type="radio" name="period" value="1" checked>1년</label>
+            <label><input v-model="period" type="radio" name="period" value="2">2년</label>
+            <label><input v-model="period" type="radio" name="period" value="3">3년</label>
         </div>
         <div>
             <label for="count">구독부수:</label>
-            <input type="number" name="count" id="count" min="0" value="1">부
+            <input v-model="count" type="number" name="count" id="count" min="0" value="1">부
         </div>
         <div>
             <label for="donation">후원:</label>
-            <input type="number" name="donation" id="donation" min="0" step="500" value="3000">원
+            <input v-model="donation" type="number" name="donation" id="donation" min="0" step="500" value="3000">원
         </div>
-        <div>
+        <div v-cloak>
             총 결제 금액:
-            <span class="amount  js-amount"></span>원
+            <span class="amount  js-amount">{{ amount }}</span>원
         </div>
     </form>
 </div>
