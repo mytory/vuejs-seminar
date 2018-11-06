@@ -6,10 +6,6 @@ input[type=number] {
     text-align: right;
 }
 
-input[readonly] {
-    background-color: #efefef;
-}
-
 .text-center {
     text-align: center;
 }
@@ -24,6 +20,14 @@ input[readonly] {
 .list {
     width: 300px;
     margin-left: 3em;
+}
+
+.amount {
+    display: inline-block;
+    min-width: 6em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1px;
+    text-align: right;
 }
 
 table {
