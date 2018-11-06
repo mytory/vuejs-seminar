@@ -1,0 +1,18 @@
+language: node_js
+os: linux
+node_js:
+  - "8"
+before_install:
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+install:
+  - npm install codecov -g
+  - npm install coveralls -g
+  - npm install codeclimate-test-reporter -g
+  - npm install
+script:
+  - npm test
+after_success:
+  - codecov
+  - coveralls < ./coverage/lcov.info
+  - CODECLIMATE_REPO_TOKEN=3638311d28b61d4720a6e9b45382e55bbb04c78535e1684c6c5b74462a38b9fd codeclimate-test-reporter < ./coverage/lcov.info
