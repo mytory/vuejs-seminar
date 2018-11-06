@@ -22,7 +22,17 @@ var app = new Vue({
             this.list.push(item);
             this.name = '';
             this.amount = '';
+            document.querySelector('[name=name]').focus();
             this.id++;
+        },
+        remove: function (id) {
+            var newList = [];
+            this.list.forEach(function (item) {
+                if (item.id !== id) {
+                    newList.push(item);
+                }
+            });
+            this.list = newList;
         }
     }
 });
