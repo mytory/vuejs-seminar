@@ -22,22 +22,22 @@
             </div>
             <div class="bd">
                 <div>
-                    <label><input type="radio" name="method" value="card" checked>신용카드</label>
+                    <label><input v-model="method" type="radio" name="method" value="card" checked>신용카드</label>
                 </div>
                 <div>
-                    <label><input type="radio" name="method" value="card_mobile">신용카드(모바일)</label>
+                    <label><input v-model="method" type="radio" name="method" value="card_mobile">신용카드(모바일)</label>
                 </div>
                 <div>
-                    <label><input type="radio" name="method" value="account">계좌이체</label>
+                    <label><input v-model="method" type="radio" name="method" value="account">계좌이체</label>
                 </div>
                 <div class="js-notice">
                     <small>윈도우, iOS, 안드로이드 외에는 계좌이체만 지원합니다.</small>
                 </div>
             </div>
         </div>
-        <div>
+        <div v-show="method === 'account'" v-cloak>
             <label for="account_name">입금자명:</label>
-            <input type="text" name="account_name" id="account_name" v-model="account_name">
+            <input :disabled="method !== 'account'" type="text" name="account_name" id="account_name" v-model="account_name">
         </div>
     </form>
 </div>

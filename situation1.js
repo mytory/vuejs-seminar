@@ -5,7 +5,8 @@ var app = new Vue({
     el: '#app',
     data: {
         name: '',
-        account_name: ''
+        account_name: '',
+        method: 'card'
     },
     watch: {
         name: function (value) {

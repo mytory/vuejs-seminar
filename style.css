@@ -6,6 +6,10 @@ input[type=number] {
     text-align: right;
 }
 
+[v-cloak] {
+    display: none;
+}
+
 .text-center {
     text-align: center;
 }
