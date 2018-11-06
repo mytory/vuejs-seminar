@@ -12,5 +12,33 @@ var app = new Vue({
         name: function (value) {
             this.account_name = value;
         }
+    },
+    methods: {
+        getOsType: function () {
+            var detected = browserDetect();
+            if (detected.os.indexOf('Windows') > -1) {
+                return 'Windows';
+            }
+            if (detected.os.indexOf('OS X') > -1) {
+                return 'OS X';
+            }
+            if (detected.os.indexOf('Android') > -1) {
+                return 'Android';
+            }
+            return 'others';
+        }
+    },
+    created: function () {
+        switch(this.getOsType()) {
+            case 'Windows':
+                this.method = 'card';
+                break;
+            case 'OS X':
+            case 'Android':
+                this.method = 'card_mobile';
+                break;
+            default:
+                this.method = 'account';
+        }
     }
 });

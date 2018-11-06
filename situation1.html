@@ -20,17 +20,17 @@
             <div class="img">
                 입금방법:
             </div>
-            <div class="bd">
-                <div>
+            <div class="bd" v-cloak>
+                <div v-if="getOsType() === 'Windows'">
                     <label><input v-model="method" type="radio" name="method" value="card" checked>신용카드</label>
                 </div>
-                <div>
+                <div v-if="getOsType() === 'OS X' || getOsType() === 'Android' ">
                     <label><input v-model="method" type="radio" name="method" value="card_mobile">신용카드(모바일)</label>
                 </div>
                 <div>
                     <label><input v-model="method" type="radio" name="method" value="account">계좌이체</label>
                 </div>
-                <div class="js-notice">
+                <div v-show="getOsType() === 'others'">
                     <small>윈도우, iOS, 안드로이드 외에는 계좌이체만 지원합니다.</small>
                 </div>
             </div>
