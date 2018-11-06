@@ -10,9 +10,33 @@ input[readonly] {
     background-color: #efefef;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .container {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.list {
+    width: 300px;
+    margin-left: 3em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th {
+    background-color: #eee;
+}
+
+th, td {
+    padding: 5px;
+    border: 1px solid #eee;
 }

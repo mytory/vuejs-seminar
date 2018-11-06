@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Situation 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <form id="form">
+        <h1>문제 상황 3</h1>
+        <div>
+            <label for="name">신청자:</label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div>
+            <label for="amount">금액:</label>
+            <input type="number" name="amount" id="amount">원
+        </div>
+        <div class="text-center">
+            <button type="submit">추가</button>
+        </div>
+    </form>
+    <div class="list">
+        <h2>내역</h2>
+        <table class="js-list">
+            <thead>
+            <tr>
+                <th>신청자</th>
+                <th>금액</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+<script src="lib/jquery-3.3.1.min.js"></script>
+<script src="lib/vue.js"></script>
+<script src="situation3.js"></script>
+</body>
+</html>
