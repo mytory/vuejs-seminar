@@ -40,3 +40,22 @@ th, td {
     padding: 5px;
     border: 1px solid #eee;
 }
+
+.media, .bd {
+    overflow: hidden;
+    _overflow: visible;
+    zoom: 1;
+}
+
+.bd {
+    margin-top: 0;
+}
+
+.media .img {
+    float: left;
+    margin-right: 10px;
+}
+
+.media .img img {
+    display: block;
+}

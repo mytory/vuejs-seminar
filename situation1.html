@@ -16,10 +16,21 @@
             <label for="name">신청자명:</label>
             <input type="text" name="name" id="name">
         </div>
-        <div>
-            입금방법:
-            <label><input type="radio" name="method" value="card" checked>신용카드</label>
-            <label><input type="radio" name="method" value="account">계좌이체</label>
+        <div class="media">
+            <div class="img">
+                입금방법:
+            </div>
+            <div class="bd">
+                <div>
+                    <label><input type="radio" name="method" value="card" checked>신용카드</label>
+                </div>
+                <div>
+                    <label><input type="radio" name="method" value="card_mobile">신용카드(모바일)</label>
+                </div>
+                <div>
+                    <label><input type="radio" name="method" value="account">계좌이체</label>
+                </div>
+            </div>
         </div>
         <div>
             <label for="account_name">입금자명:</label>
