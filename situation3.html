@@ -10,15 +10,15 @@
 </head>
 <body>
 <div class="container" id="app">
-    <form id="form">
+    <form id="form" @submit="add">
         <h1>상황 3</h1>
         <div>
             <label for="name">신청자:</label>
-            <input type="text" name="name" id="name">
+            <input v-model="name" type="text" name="name" id="name">
         </div>
         <div>
             <label for="amount">금액:</label>
-            <input type="number" name="amount" id="amount">원
+            <input v-model="amount" type="number" name="amount" id="amount">원
         </div>
         <div class="text-center">
             <button type="submit">추가</button>
@@ -35,10 +35,15 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
+            <tr v-show="list.length === 0">
                 <td colspan="3" class="text-center">
                     내역이 없습니다.
                 </td>
+            </tr>
+            <tr v-for="item in list" v-cloak>
+                <td class="text-center">{{ item.name }}</td>
+                <td class="text-right">{{ item.amount }}</td>
+                <td class="text-center"><button type="button">제거</button></td>
             </tr>
             </tbody>
         </table>
