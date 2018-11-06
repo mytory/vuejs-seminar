@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Situation 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <form>
+        <h1>문제 상황 2</h1>
+        <div>
+            구독기간:
+            <label><input type="radio" name="period" value="1년" checked>1년</label>
+            <label><input type="radio" name="period" value="2년">2년</label>
+            <label><input type="radio" name="period" value="3년">3년</label>
+        </div>
+        <div>
+            <label for="count">구독부수:</label>
+            <input type="number" name="count" id="count">부
+        </div>
+        <div>
+            <label for="donation">후원:</label>
+            <input type="number" name="donation" id="donation">원
+        </div>
+        <div>
+            <label for="amount">총 결제 금액:</label>
+            <input type="number" name="amount" id="amount" readonly>원
+        </div>
+    </form>
+</div>
+<script src="lib/jquery-3.3.1.min.js"></script>
+<script src="lib/vue.js"></script>
+<script src="situation1.js"></script>
+</body>
+</html>
