@@ -77,3 +77,11 @@ th, td {
 .media .img img {
     display: block;
 }
+
+[v-cloak] {
+    display: none!important;
+}
+
+[disabled] {
+    opacity: 0.5;
+}
